@@ -2,6 +2,11 @@
 
 A Basic Flutter Plugin to open Contact Page of Native Platform
 
+## Add Dependency 
+    dependencies:
+        intent_contact:
+        git:
+          url: git://github.com/shmehdi01/intent_contact
 
 ## Support
  * Android
