@@ -1,15 +1,24 @@
-# intent_contact
+# INTENT CONTACT
 
-A new flutter plugin project.
+A Basic Flutter Plugin to open Contact Page of Native Platform
 
-## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Support
+ * Android
+ * iOS (Comming Soon)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
+## Example
+
+    // Platform messages are asynchronous, so we initialize in an async method.
+    Future<void> loadContactPage() async {
+        //@result {"name": "XYZ", "number": "9876543210", "hasNumber" : "1"}
+        
+        String data;
+        // Platform messages may fail, so we use a try/catch PlatformException.
+        try {
+            data = await IntentContact.platformContactPage;
+            } on PlatformException {
+            data = 'Failed to get contact.';
+        }
+    }
